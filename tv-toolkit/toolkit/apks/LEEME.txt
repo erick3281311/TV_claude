@@ -1,0 +1,4 @@
+Copia aqui el APK precompilado del launcher (sin compilar nada):
+  FLauncher  (me.efesser.flauncher)  -> https://gitlab.com/etienn01/flauncher/-/releases
+  Projectivy (com.spocky.projengmenu)-> APK del desarrollador (nombre de archivo con "projectivy")
+Uso: python3 tvkit.py --ip IP --launcher flauncher all

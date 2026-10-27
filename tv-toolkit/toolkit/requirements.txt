@@ -1,0 +1,1 @@
+# Solo libreria estandar de Python 3.8+. Requiere adb en el PATH.

@@ -1,0 +1,114 @@
+{
+  "_doc": "Grupos de paquetes a deshabilitar (pm disable-user --user 0). mode=group: una sola confirmacion; mode=each: confirmacion por paquete. NUNCA se desinstala nada.",
+  "groups": [
+    {
+      "name": "Fix boton Home (Google TV)",
+      "desc": "Asistente de configuracion inicial que a veces secuestra el boton Home.",
+      "mode": "group",
+      "packages": {
+        "com.google.android.tungsten.setupwraith": "Setup wizard Google TV (corrige Home)"
+      }
+    },
+    {
+      "name": "Telemetria y reportes",
+      "desc": "Envio de reportes, feedback y trazas. Sin impacto funcional.",
+      "mode": "group",
+      "packages": {
+        "com.google.android.feedback": "Feedback/reportes a Google",
+        "com.google.android.partnersetup": "Partner setup (telemetria de fabricante)",
+        "com.android.traceur": "System Tracing",
+        "com.google.android.tv.bugreportsender": "Envio de bugreports",
+        "com.google.android.onetimeinitializer": "Inicializador unico",
+        "com.google.android.printservice.recommendation": "Recomendaciones de impresion"
+      }
+    },
+    {
+      "name": "Anuncios, recomendaciones y salvapantallas",
+      "desc": "Canales promocionados, 'Watch Next' invasivo, ambient con contenido sugerido.",
+      "mode": "group",
+      "packages": {
+        "com.google.android.leanbacklauncher.recommendations": "Recomendaciones del launcher",
+        "com.google.android.tvrecommendations": "Servicio de recomendaciones",
+        "com.google.android.backdrop": "Salvapantallas Google",
+        "com.google.android.apps.tv.dreamx": "Ambient Mode (Google TV)",
+        "com.netflix.partner.activation": "Activacion/promos Netflix"
+      }
+    },
+    {
+      "name": "Apps clave (preguntar una por una)",
+      "desc": "Asistentes de voz, Chromecast integrado, tiendas alternativas, tiendas de contenido.",
+      "mode": "each",
+      "packages": {
+        "com.google.android.katniss": "Busqueda/Asistente por voz (boton microfono)",
+        "com.google.android.googlequicksearchbox": "Google Assistant / busqueda",
+        "com.google.android.apps.mediashell": "Chromecast integrado (Cast receiver)",
+        "com.google.android.videos": "Google TV peliculas (tienda)",
+        "com.google.android.play.games": "Play Games",
+        "com.google.android.youtube.tvmusic": "YouTube Music TV",
+        "com.amazon.amazonvideo.livingroom": "Prime Video (app preinstalada)",
+        "cm.aptoide.pt": "Aptoide (tienda alternativa)",
+        "com.aptoide.partner": "Aptoide partner",
+        "com.apkpure.aegon": "APKPure (tienda alternativa)",
+        "com.mitv.tvhome": "Xiaomi PatchWall (launcher con anuncios)",
+        "com.xiaomi.mitv.payment": "Xiaomi pagos",
+        "com.tcl.tvlauncher": "TCL launcher",
+        "com.sony.dtv.promos": "Sony promos"
+      }
+    },
+    {
+      "name": "Launchers por defecto de Google/Android TV",
+      "desc": "Solo se ofrece DESPUES de instalar y verificar el launcher minimalista. Revertible con restore.",
+      "mode": "each",
+      "stock_launchers": true,
+      "packages": {
+        "com.google.android.apps.tv.launcherx": "Google TV Home (con anuncios/recomendaciones)",
+        "com.google.android.tvlauncher": "Android TV Home",
+        "com.google.android.leanbacklauncher": "Leanback Launcher (Android TV antiguo)"
+      }
+    }
+  ],
+  "protected_prefixes": [
+    "android",
+    "com.android.systemui",
+    "com.android.settings",
+    "com.android.tv.settings",
+    "com.google.android.gms",
+    "com.google.android.gsf",
+    "com.android.vending",
+    "com.android.providers.",
+    "com.google.android.inputmethod",
+    "com.android.inputmethod",
+    "com.google.android.tv.remote",
+    "com.google.android.permissioncontroller",
+    "com.android.permissioncontroller",
+    "com.android.packageinstaller",
+    "com.google.android.packageinstaller",
+    "com.google.android.webview",
+    "com.android.webview",
+    "com.google.android.trichromelibrary",
+    "com.android.bluetooth",
+    "com.android.shell",
+    "com.android.networkstack",
+    "com.android.tv",
+    "com.minimaltv.launcher",
+    "com.android.keychain",
+    "com.android.certinstaller",
+    "com.android.externalstorage",
+    "com.android.documentsui",
+    "com.android.location",
+    "com.android.phone",
+    "me.efesser.flauncher",
+    "com.spocky.projengmenu"
+  ],
+  "heuristic_keywords": [
+    "analytics",
+    "telemetry",
+    "adservice",
+    "advert",
+    "promo",
+    "hotlist",
+    "upsell",
+    "bugreport",
+    "stats"
+  ]
+}
